@@ -29,7 +29,7 @@ function Home() {
     } else {
         return (
             <div className='container'>
-                Listado de productos
+                <h2>Listado de productos</h2>
                 <div className='productContainer'>
                 {products.map(product => <Product prod={product} key={product.id}/>)}
                 </div>

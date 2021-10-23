@@ -10,11 +10,13 @@ import SignUp from './components/SignUp';
 import Checkout from './components/Checkout';
 import Home from './components/Home';
 import Details from './components/Details';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <Router>
     <div>
+      <NavBar/>
         <Switch>
           <Route path="/login">
             <Login />
