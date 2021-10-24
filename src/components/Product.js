@@ -10,7 +10,7 @@ const Product = (props) => {
             <h3>{prod.title}</h3>
             <p>$ {prod.price}</p>
             <img src={prod.image} alt={'product'} width={'100px'} height={'100px'}/>
-            <button><Link to={"/details/" + prod.id}>Ver detalle</Link></button>
+            <button className='compra'><Link to={{pathname:"/details/", state:{prod: prod}}}>Comprar</Link></button>
         </div>
     )
 }

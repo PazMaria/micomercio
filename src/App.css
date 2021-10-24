@@ -30,6 +30,18 @@ background-color: #eef6fb;
   padding-bottom: 10px;
 }
 
+.productCard a {
+  color: #021E39;
+  text-decoration: none;
+}
+.productCard a:hover {
+  color: white;
+}
+
+.compra:hover {
+  color: white;
+  background-color: #021E39;
+}
 
 /* -------------navbar--------------- */
 .navbar{
@@ -81,7 +93,8 @@ input{
   display:flex;
   justify-content: center;
   width:100%;
-  background-color: rgb(42, 160, 182);
+  background-color: #021E39;
+  /* background-color: rgb(42, 160, 182); */
   color: #fff;
   margin-top: 1em;
   padding: 10px;
@@ -90,8 +103,34 @@ input{
   border: none;
   border-radius: 5px;
 }
-button:hover {background-color: rgb(19, 74, 83)}
-button:active {
+.boton:hover {
+  background-color: #073764;
+}
+.boton:active {
   transform: scale(0.98);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
         }
+
+/* -----------detalle----------- */
+
+.detailsContainer{
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  border-color: black;
+  border-width: 1;
+  margin: 20px auto;
+}
+
+.imagen{
+  background-color: white;
+  margin-right: 20px;
+  -webkit-box-shadow: -1px 1px 5px 4px #ccc;
+  -moz-box-shadow: -1px 1px 5px 4px #ccc;
+  box-shadow: -1px 1px 5px 4px #ccc;
+}
+
+button {
+  cursor:pointer;
+}
