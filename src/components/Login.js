@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 function Login() {
     const onHandleSubmit = () => {
@@ -13,7 +14,7 @@ function Login() {
                 <label htmlFor='password'>Contraseña</label>
                 <input id='password' type='password' name='password' ></input>
                 
-                <button type='button' className='boton' onClick={onHandleSubmit} >Login</button>
+                <button type='button' className='boton' onClick={onHandleSubmit} ><Link to={"/"}>Login</Link></button>
             </form>
         </div>
     )

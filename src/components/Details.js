@@ -1,14 +1,12 @@
-import React from 'react'
+import {useState} from 'react'
 import { useLocation } from "react-router-dom"
+import CompraModal from './CompraModal'
 
 
 function Details() {
     const location = useLocation()
     const {prod} = location.state
-
-    const onHandleClick = () => {
-        alert('Gracias por su compra')
-    }
+    const [modalOpen, setModalOpen] = useState(false)
 
     return (
         <div className='detailsContainer'>
@@ -20,8 +18,9 @@ function Details() {
                 <p>{`$ ${prod.price}`}</p>
                 <p>{`${prod.rating.count} en stock`}</p>
                 <p>{prod.description}</p>
-                <button className='compra' onClick={onHandleClick}>Comprar</button>
+                <button className='compra' onClick={() => {setModalOpen(true)}}>Comprar</button>
             </div>
+            {modalOpen && <CompraModal setOpenModal={setModalOpen} />}
         </div>
     )
 
